@@ -1,18 +1,25 @@
 {
   "name": "@pipeworx/mcp-devdocs-io",
   "version": "0.1.0",
-  "description": "DevDocs.io keyless docs index + entry search + content (Angular, MDN, Rust, etc.).",
+  "description": "DevDocs.io MCP.",
   "type": "module",
   "main": "src/index.ts",
   "types": "src/index.ts",
+  "bin": {
+    "mcp-devdocs-io": "bin/cli.js"
+  },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "devdocs-io"],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pipeworx-io/mcp-devdocs-io"
+    "url": "git+https://github.com/pipeworx-io/mcp-devdocs-io.git"
   },
   "scripts": {
     "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "tsx": "^4.19.0"
   },
   "devDependencies": {
     "typescript": "^5.7.0"
