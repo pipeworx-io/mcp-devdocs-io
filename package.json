@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-devdocs-io",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "DevDocs.io MCP.",
   "type": "module",
   "main": "src/index.ts",
@@ -24,5 +24,9 @@
   "devDependencies": {
     "typescript": "^5.9.3",
     "@cloudflare/workers-types": "^4.20260405.1"
+  },
+  "pipeworx": {
+    "sourceHash": "v1-6d23b8dfc856aa5ae7bec056fcdb19933d50edf86f1264b2a71cdf58060616f4",
+    "sourceCommit": "76aa8f5d9b5dc2f665563030647c68e661478864"
   }
 }

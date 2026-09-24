@@ -3,7 +3,7 @@
   "name": "io.github.pipeworx-io/devdocs-io",
   "title": "Devdocs Io",
   "description": "DevDocs.io MCP.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "websiteUrl": "https://pipeworx.io/packs/devdocs-io",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-devdocs-io",
