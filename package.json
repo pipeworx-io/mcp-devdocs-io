@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-devdocs-io",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "DevDocs.io MCP.",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-devdocs-io": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "devdocs-io"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-devdocs-io.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/devdocs-io",
   "pipeworx": {
-    "sourceHash": "v1-d3ed5a238de7803548ca6eea03a8c181633cc43655d6aac92ac86f2cc908b764",
-    "sourceCommit": "29fb434ca65fe0f61191f19c3502f583f5fb99d7"
+    "mode": "gateway",
+    "slug": "devdocs-io",
+    "gatewaySlug": "devdocs-io",
+    "sourceHash": "v1-6e71851069bcfbc91b0abeb82c83dc587ebb29c08ca956a16d684622d79d65fd",
+    "sourceCommit": "0b3faaa4d85299a961dd86dea75a0f0e1dad280c"
   }
 }

@@ -1,0 +1,114 @@
+[
+  {
+    "name": "docs",
+    "description": "Return the full DevDocs.io catalog of all available documentation sets: name, slug, type, version, and release for every supported library/language.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    }
+  },
+  {
+    "name": "search_docs",
+    "description": "Find which documentation SETS exist whose NAME matches a substring (e.g. \"python\" → Python 3.x, \"react\" → React). Returns doc SETS, NOT their content — this does NOT look up a function/method/API name. To search inside a doc for an entry like \"Array.map\" or \"fetch\", use search_index (slug + query).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Substring of a documentation-set name, e.g. \"javascript\", \"postgres\"."
+        }
+      },
+      "required": [
+        "query"
+      ]
+    }
+  },
+  {
+    "name": "index",
+    "description": "Index of entries inside a doc.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "slug": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "slug"
+      ]
+    }
+  },
+  {
+    "name": "search_index",
+    "description": "Search WITHIN a documentation set for a specific entry (method/function/API/property) by substring — THIS is the content lookup. E.g. slug=\"javascript\", query=\"Array.map\"; slug=\"python\", query=\"os.path\". Get valid slugs from docs/search_docs.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "slug": {
+          "type": "string",
+          "description": "The documentation set, e.g. \"javascript\", \"python\", \"react\"."
+        },
+        "query": {
+          "type": "string",
+          "description": "The entry/term to find, e.g. \"Array.map\", \"fetch\"."
+        },
+        "limit": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "slug",
+        "query"
+      ]
+    }
+  },
+  {
+    "name": "db",
+    "description": "Content database for a doc (large).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "slug": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "slug"
+      ]
+    }
+  },
+  {
+    "name": "entry",
+    "description": "Single entry HTML.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "slug": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "slug",
+        "path"
+      ]
+    }
+  },
+  {
+    "name": "types",
+    "description": "List categories inside a doc.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "slug": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "slug"
+      ]
+    }
+  }
+]
