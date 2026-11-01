@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-devdocs-io",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "DevDocs.io MCP.",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "devdocs-io",
     "gatewaySlug": "devdocs-io",
-    "sourceHash": "v1-6e71851069bcfbc91b0abeb82c83dc587ebb29c08ca956a16d684622d79d65fd",
-    "sourceCommit": "0b3faaa4d85299a961dd86dea75a0f0e1dad280c"
+    "sourceHash": "v1-a8da498fdbd3fc1f3b678f57393824b0a9d136b07bb4280a201fbfc19f189084",
+    "sourceCommit": "e707a4bb6209f432984c0a83bf64b3138130db89"
   }
 }
